@@ -1,5 +1,5 @@
 "use client"
-import { createTransaction, updateTransaction } from "@/actions/trnsaction";
+import { createTransaction, updateTransaction } from "@/actions/transaction";
 import { transactionSchema } from "@/app/lib/schema";
 import CreateAccountDrawer from "@/components/create-account-drawer";
 

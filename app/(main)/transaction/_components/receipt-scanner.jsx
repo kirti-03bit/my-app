@@ -1,6 +1,6 @@
 "use client";
 
-import { scanReceipt } from "@/actions/trnsaction";
+import { scanReceipt } from "@/actions/transaction";
 import { Button } from "@/components/ui/button";
 import useFetch from "@/hooks/use-fetch";
 import { Camera, Loader2 } from "lucide-react";
