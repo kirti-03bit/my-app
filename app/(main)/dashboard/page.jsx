@@ -8,9 +8,17 @@ import AccountCard from "./_components/account-card";
 import { BudgetProgress } from "./_components/budget-progress";
 import { DashboardOverview } from "./_components/transaction-overview";
 
+import { auth, redirectToSignIn } from "@clerk/nextjs/server";
 
 
 async function DashboardPage(){
+
+
+
+  const { userId } = auth();
+  if (!userId) {
+    return redirectToSignIn();
+  }
  const accounts =await getUserAccounts();
  const defaultAccount = accounts?.find((account) => account.isDefault);
 // Get budget for default account
